@@ -97,7 +97,7 @@ function Home({listaDeFavs}) {
                 </Form>
             </div>
 
-            <div className="row justify-content-around">
+            <div className="row justify-content-around gameList">
                 {listaDeJuegos.map((juego) => (
                     <Item item={juego} itemList={listaDeJuegos} id={juego.id} />
                 ))}

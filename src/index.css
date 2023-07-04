@@ -28,6 +28,10 @@ code {
   transform: scale(1.1);
 }
 
+.gameList{
+  max-width: 100vw;
+}
+
 .gameDetails{
   padding: 20px;
 }
