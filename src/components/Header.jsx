@@ -6,7 +6,7 @@ function Header() {
     return (
         <Navbar data-bs-theme="dark" className="bg-body-tertiary header">
             <Container>
-                <Navbar.Brand href="/">FreeToPlay.com</Navbar.Brand>
+                <Navbar.Brand  href="/"><p className="logo">FreeToPlay.com</p></Navbar.Brand>
                 <Navbar.Toggle />
             </Container>
         </Navbar>
