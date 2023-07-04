@@ -15,7 +15,7 @@ import { faEnvelope, faFacebook } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
     return (
-        <footer className="bg-dark text-light footer pt-4">
+        <footer className="bg-dark text-light footer pt-4 mt-10">
             <Container>
                 <Row>
                     <Col md={4} sm={6}>

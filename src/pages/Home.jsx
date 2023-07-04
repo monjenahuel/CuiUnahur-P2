@@ -69,15 +69,17 @@ function Home({listaDeFavs}) {
 
         }
     }
-    
 
+    const preventDefault = (event) =>{
+        event.preventDefault();
+    }
 
     return (
         <div className="App">
             <Header/>
 
             <div className="row d-flex justify-content-center m-4">
-                <Form className="d-flex col-lg-8 col-md-8 col-sm-12">
+                <Form onSubmit={preventDefault} className="d-flex col-lg-8 col-md-8 col-sm-12">
                     <Form.Control
                         type="search"
                         placeholder="Buscar"
@@ -95,7 +97,6 @@ function Home({listaDeFavs}) {
                 </Form>
             </div>
 
-            {/* <div className='d-flex p-2 justify-content-around'> */}
             <div className="row justify-content-around">
                 {listaDeJuegos.map((juego) => (
                     <Item item={juego} itemList={listaDeJuegos} id={juego.id} />
