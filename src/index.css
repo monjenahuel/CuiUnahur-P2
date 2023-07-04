@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.game{
+  /* border: 2px solid red; */
+  background-color: #32383e;
+  color: #aaaaaa;
+  min-width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.game:hover{
+  background-color: #1f5f61;
+  transform: scale(1.1);
+}
+
+.gameDetails{
+  border: 2px solid red;
+  background-color: azure;
+}
+
+.gameDetails img{
+  border: 2px solid red;
+  background-color: azure;
+  max-width: 100%;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.maxWidth50{
+  max-width: 50%;
+}
+
+.form-check-input:checked{
+  background-color: #1f5f61 !important;
+  border-color: #0b8185 !important;
+}
+
+.footer{
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  }
