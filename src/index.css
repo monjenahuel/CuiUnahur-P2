@@ -34,12 +34,8 @@ code {
 
 .gameDetails{
   padding: 20px;
-}
-
-.gameDetails img{
-  border: 2px solid red;
-  background-color: azure;
-  max-width: 100%;
+  background-color: #212d2d;
+  color: rgb(214, 209, 199);
 }
 
 .card-link {
@@ -86,4 +82,53 @@ li a:hover{
 
 .mt-10{
   margin-top: 10%;
+}
+
+/* gameDetails */
+
+.gameDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gameDetails img {
+  margin-bottom: 20px;
+}
+
+.gameDetails h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.gameDetails p {
+  margin-bottom: 20px;
+}
+
+.gameDetails h6 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.gameDetails a {
+  color: #007bff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.gameDetails a:hover {
+  text-decoration: underline;
+}
+
+.gameDetails button {
+  margin-top: 20px;
+}
+
+.shadowCustom{
+  box-shadow: 0px 5px 10px 7px rgba(0, 0, 0, 0.5) !important;
 }
