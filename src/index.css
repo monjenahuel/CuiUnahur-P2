@@ -146,3 +146,18 @@ li a:hover{
   width: 40px;
 }
 
+.loader {
+  border: 8px solid #f3f3f3; /* Color del borde del spinner */
+  border-top: 8px solid #3498db; /* Color de la parte superior del spinner */
+  border-radius: 50%; /* Forma redondeada del spinner */
+  width: 60px; /* Ancho del spinner */
+  height: 60px; /* Altura del spinner */
+  animation: spin 1s linear infinite; /* Animación de rotación */
+  margin: 10% auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+

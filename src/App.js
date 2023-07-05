@@ -9,9 +9,10 @@ import Swal from 'sweetalert2'
 
 function App() {
 
-  //-------------------------
+  useEffect(() => {
+    document.title = 'FreeToPlay'; // Cambia el título de la pestaña
+  }, []);
 
-  
   let [listaDeFavs, editarFavs] = useState([]);
 
   useEffect(() => {
@@ -47,7 +48,6 @@ function App() {
       imageAlt: 'Imagen de un gatito muy pero muy triste',
       title: '¿Quitar de tus favoritos?',
       text: "Siempre podes volver a agregarlo",
-      // icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
@@ -68,9 +68,6 @@ function App() {
     })
       
 };
-
-
-  //-----------------------------------
 
 
   return (

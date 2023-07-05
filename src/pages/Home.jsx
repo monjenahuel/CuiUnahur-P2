@@ -62,10 +62,8 @@ function Home({ listaDeFavs }) {
             let result = juegosCargados.filter((juego) =>
                 listaDeFavs.includes(juego.id)
             );
-            console.log("Estos son los games fav:", result);
             obtenerListaDeJuegos(result);
         } else {
-            console.log("unchecked");
             obtenerListaDeJuegos(juegosCargados);
         }
     };
@@ -108,10 +106,8 @@ function Home({ listaDeFavs }) {
             <div className="row justify-content-around gameList">
                 {listaDeJuegos.map((juego) => {
                     if ((listaDeFavs.includes(juego.id))) {
-                        console.log("Iteracion!")
                         return <Item item={juego} itemList={listaDeJuegos} id={juego.id} fav={true}/>
                     } else {
-                        console.log("Iteracion!")
                         return  <Item item={juego} itemList={listaDeJuegos} id={juego.id} fav={false}/>
                     }
                     

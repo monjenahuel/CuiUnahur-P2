@@ -2,14 +2,12 @@ import React from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 
 const GameDetails = ({ game, listaFavs, addToFav, delFromFav }) => {
-    console.log("listaFavs:", listaFavs);
 
     const {
         id,
         title,
         thumbnail,
         description,
-        game_url,
         genre,
         platform,
         publisher,
@@ -21,10 +19,8 @@ const GameDetails = ({ game, listaFavs, addToFav, delFromFav }) => {
         //Si el juego no está en favs lo agrega
         if (!listaFavs.includes(id)) {
             addToFav(id);
-            console.log("Añadido");
         } else {
             delFromFav(id);
-            console.log("Eliminado");
         }
     };
 

@@ -4,9 +4,8 @@ import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import GameDetails from "../components/GameDetails";
-import Swal from 'sweetalert2'
 
-function Game({listaDeFavs,handleAddFavorite,handleDeleteFav}) {
+function Game({ listaDeFavs, handleAddFavorite, handleDeleteFav }) {
     const options = {
         method: "GET",
         headers: {
@@ -16,7 +15,6 @@ function Game({listaDeFavs,handleAddFavorite,handleDeleteFav}) {
         },
     };
 
-    
     let [data, setData] = useState("");
 
     const { idGame } = useParams();
@@ -32,16 +30,20 @@ function Game({listaDeFavs,handleAddFavorite,handleDeleteFav}) {
 
     return (
         <div className="App">
-            <Header/>
-            <div className="container">
-                <GameDetails
-                    game={data}
-                    listaFavs={listaDeFavs}
-                    addToFav={handleAddFavorite}
-                    delFromFav={handleDeleteFav}
-                />
-            </div>
-                <Footer/>
+            <Header />
+            {data ? (
+                <div className="container">
+                    <GameDetails
+                        game={data}
+                        listaFavs={listaDeFavs}
+                        addToFav={handleAddFavorite}
+                        delFromFav={handleDeleteFav}
+                    />
+                </div>
+            ) : (
+                <div className="loader"></div>
+            )}
+            <Footer />
         </div>
     );
 }
