@@ -1,17 +1,7 @@
-// function Footer() {
-//     return (
-//         // <div className="footer">
-//             <h3>Soy el footer</h3>
-//         // </div>
-//     );
-// }
-
-// export default Footer;
-
 import React from "react";
 import { Container, Row, Col, Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faFacebook } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
     return (

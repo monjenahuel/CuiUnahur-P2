@@ -38,20 +38,6 @@ const GameDetails = ({ game, listaFavs, addToFav, delFromFav }) => {
     ? "warning"
     : "danger";
 
-    // return (
-    //     <div className="container gameDetails">
-    //         <img src={thumbnail} alt="" width={600}/>
-    //         <h3>{title}</h3>
-    //         {description}
-    //         <h6>{genre}</h6>
-    //         <a href={game_url}></a>
-    //         <h6>{platform}</h6>
-    //         <h6>{publisher}</h6>
-    //         <h6>{developer}</h6>
-    //         <h6>{release_date}</h6>
-    //         <button className='btn btn-warning' onClick={agregarJuegoActualAFavs}>{favButtonText}</button>
-    //     </div>
-    // )
 
     return (
         <Container className="gameDetails mt-4 p-4">

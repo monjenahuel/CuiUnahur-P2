@@ -5,7 +5,7 @@ import Item from "../components/Item";
 import { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 
-function Home({listaDeFavs}) {
+function Home({ listaDeFavs }) {
     const options = {
         method: "GET",
         headers: {
@@ -51,36 +51,38 @@ function Home({listaDeFavs}) {
     const handleBusqueda = (e) => {
         filtrarLista(e.target.value);
         setBusqueda(e.target.value);
-
     };
 
     useEffect(() => {
         GetListaDeJuegosAPI();
     }, []);
 
-
-
     const handleFavList = (event) => {
-        if(event.target.checked){
-            let result = juegosCargados.filter(juego => listaDeFavs.includes(juego.id))
-            console.log("Estos son los games fav:", result)
-            obtenerListaDeJuegos(result)
-        }else{
-            console.log("unchecked")
-            obtenerListaDeJuegos(juegosCargados)
+        if (event.target.checked) {
+            let result = juegosCargados.filter((juego) =>
+                listaDeFavs.includes(juego.id)
+            );
+            console.log("Estos son los games fav:", result);
+            obtenerListaDeJuegos(result);
+        } else {
+            console.log("unchecked");
+            obtenerListaDeJuegos(juegosCargados);
         }
-    }
+    };
 
-    const preventDefault = (event) =>{
+    const preventDefault = (event) => {
         event.preventDefault();
-    }
+    };
 
     return (
         <div className="App">
-            <Header/>
+            <Header />
 
             <div className="row d-flex justify-content-center m-4">
-                <Form onSubmit={preventDefault} className="d-flex col-lg-8 col-md-8 col-sm-12">
+                <Form
+                    onSubmit={preventDefault}
+                    className="d-flex col-lg-8 col-md-8 col-sm-12"
+                >
                     <Form.Control
                         type="search"
                         placeholder="Buscar"
@@ -89,27 +91,36 @@ function Home({listaDeFavs}) {
                         value={busqueda}
                         onChange={handleBusqueda}
                     />
-                    <Form.Switch 
-                            id="favSwitch"
-                            label="Favoritos"
-                            style={{ color: 'white', marginLeft:'10px', marginTop: '6px', fontSize:'large' }}
-                            onChange={handleFavList}
+                    <Form.Switch
+                        id="favSwitch"
+                        label="Favoritos"
+                        style={{
+                            color: "white",
+                            marginLeft: "10px",
+                            marginTop: "6px",
+                            fontSize: "large",
+                        }}
+                        onChange={handleFavList}
                     />
                 </Form>
             </div>
 
             <div className="row justify-content-around gameList">
-                {listaDeJuegos.map((juego) => (
-                    <Item item={juego} itemList={listaDeJuegos} id={juego.id} />
-                ))}
+                {listaDeJuegos.map((juego) => {
+                    if ((listaDeFavs.includes(juego.id))) {
+                        console.log("Iteracion!")
+                        return <Item item={juego} itemList={listaDeJuegos} id={juego.id} fav={true}/>
+                    } else {
+                        console.log("Iteracion!")
+                        return  <Item item={juego} itemList={listaDeJuegos} id={juego.id} fav={false}/>
+                    }
+                    
+                })}
+
             </div>
             <Footer />
         </div>
     );
-
 }
-
-
-
 
 export default Home;
