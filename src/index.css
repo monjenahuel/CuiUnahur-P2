@@ -146,6 +146,13 @@ li a:hover{
   width: 40px;
 }
 
+
+
+.favButton:hover{
+  color:rgb(255, 255, 255) !important;
+  border-color: rgb(255, 255, 255) !important;
+}
+
 .loader {
   border: 8px solid #f3f3f3; /* Color del borde del spinner */
   border-top: 8px solid #3498db; /* Color de la parte superior del spinner */

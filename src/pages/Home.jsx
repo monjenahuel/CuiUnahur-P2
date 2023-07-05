@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Item from "../components/Item";
 import { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
+import ToggleButton from 'react-bootstrap/ToggleButton';
 
 function Home({ listaDeFavs }) {
     const options = {
@@ -18,6 +19,8 @@ function Home({ listaDeFavs }) {
     const [listaDeJuegos, obtenerListaDeJuegos] = useState([]);
     const [juegosCargados, obtenerJuegosCargados] = useState([]);
     const [busqueda, setBusqueda] = useState("");
+
+    const [onlyFavs, setOnlyFavs] = useState(false);
 
     const GetListaDeJuegosAPI = async () => {
         try {
@@ -49,6 +52,7 @@ function Home({ listaDeFavs }) {
     };
 
     const handleBusqueda = (e) => {
+        setOnlyFavs(false)
         filtrarLista(e.target.value);
         setBusqueda(e.target.value);
     };
@@ -59,11 +63,13 @@ function Home({ listaDeFavs }) {
 
     const handleFavList = (event) => {
         if (event.target.checked) {
+            setOnlyFavs(event.currentTarget.checked)
             let result = juegosCargados.filter((juego) =>
                 listaDeFavs.includes(juego.id)
             );
             obtenerListaDeJuegos(result);
         } else {
+            setOnlyFavs(event.currentTarget.checked)
             obtenerListaDeJuegos(juegosCargados);
         }
     };
@@ -89,7 +95,7 @@ function Home({ listaDeFavs }) {
                         value={busqueda}
                         onChange={handleBusqueda}
                     />
-                    <Form.Switch
+                    {/* <Form.Switch
                         id="favSwitch"
                         label="Favoritos"
                         style={{
@@ -99,20 +105,44 @@ function Home({ listaDeFavs }) {
                             fontSize: "large",
                         }}
                         onChange={handleFavList}
-                    />
+                    /> */}
+
+                    <ToggleButton
+                        className="favButton"
+                        id="toggle-check"
+                        type="checkbox"
+                        variant="outline-info"
+                        checked={onlyFavs}
+                        value="1"
+                        onChange={handleFavList}
+                    >
+                        Favoritos
+                    </ToggleButton>
                 </Form>
             </div>
 
             <div className="row justify-content-around gameList">
                 {listaDeJuegos.map((juego) => {
-                    if ((listaDeFavs.includes(juego.id))) {
-                        return <Item item={juego} itemList={listaDeJuegos} id={juego.id} fav={true}/>
+                    if (listaDeFavs.includes(juego.id)) {
+                        return (
+                            <Item
+                                item={juego}
+                                itemList={listaDeJuegos}
+                                id={juego.id}
+                                fav={true}
+                            />
+                        );
                     } else {
-                        return  <Item item={juego} itemList={listaDeJuegos} id={juego.id} fav={false}/>
+                        return (
+                            <Item
+                                item={juego}
+                                itemList={listaDeJuegos}
+                                id={juego.id}
+                                fav={false}
+                            />
+                        );
                     }
-                    
                 })}
-
             </div>
             <Footer />
         </div>

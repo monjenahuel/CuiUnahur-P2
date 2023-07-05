@@ -52,16 +52,16 @@ const GameDetails = ({ game, listaFavs, addToFav, delFromFav }) => {
                             </Button>
                         </Col> 
                         <Col xs={12} className="mb-4">
-                            <h6>Genre: {genre}</h6>
-                            <h6>Platform: {platform}</h6>
-                            <h6>Publisher:{publisher}</h6>
-                            <h6>Developer: {developer}</h6>
-                            <h6>Release Date: {release_date}</h6>
+                            <h6><span className="text-info">Genre:</span> {genre}</h6>
+                            <h6><span className="text-info">Platform:</span> {platform}</h6>
+                            <h6><span className="text-info">Publisher:</span>{publisher}</h6>
+                            <h6><span className="text-info">Developer:</span> {developer}</h6>
+                            <h6><span className="text-info">Release Date:</span> {release_date}</h6>
                         </Col>
                     </Row>
                 </Col>
                 <Col sm={12} md={6}>
-                    <h3>{title}</h3>
+                    <h1 className="mb-4 text-light">{title}</h1>
                     <p>{description}</p>
                 </Col>
             </Row>
