@@ -48,6 +48,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home listaDeFavs={listaDeFavs}/>} />
           <Route path="/game/:idGame" element={<Game listaDeFavs={listaDeFavs} handleAddFavorite={handleAddFav} handleDeleteFav={handleDeleteFav}/>} />
+          <Route path="*" element={<Home listaDeFavs={listaDeFavs}/>} />
         </Routes>
       </Router>
     </div>
