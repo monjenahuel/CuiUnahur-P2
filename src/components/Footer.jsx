@@ -9,7 +9,7 @@
 // export default Footer;
 
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faFacebook } from "@fortawesome/free-solid-svg-icons";
 
@@ -21,7 +21,8 @@ function Footer() {
                     <Col md={4} sm={6}>
                         <hr />
                         <div className="p-4">
-                            <h3 className="logo">FreeToPlay.com</h3>
+                        <a  href="/" className="logo"><h3>FreeToPlay.com</h3></a>
+                            {/* <h3 className="logo">FreeToPlay.com</h3> */}
                             <p>Juegos gratis por y para la comunidad</p>
                         </div>
                     </Col>

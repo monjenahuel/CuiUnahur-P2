@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import GameDetails from "../components/GameDetails";
+import Swal from 'sweetalert2'
 
 function Game({listaDeFavs,handleAddFavorite,handleDeleteFav}) {
     const options = {
@@ -32,9 +33,7 @@ function Game({listaDeFavs,handleAddFavorite,handleDeleteFav}) {
     return (
         <div className="App">
             <Header/>
-            {/* <div className='d-flex p-2 justify-content-around'> */}
             <div className="container">
-                {/* <GameDetails game={data}/> */}
                 <GameDetails
                     game={data}
                     listaFavs={listaDeFavs}

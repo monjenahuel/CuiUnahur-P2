@@ -49,9 +49,6 @@ li a:hover{
   color: #0b8185;
 }
 
-/* .maxWidth50{
-  max-width: 50%;
-} */
 
 .form-check-input:checked{
   background-color: #1f5f61 !important;
@@ -59,9 +56,6 @@ li a:hover{
 }
 
 .footer{
-  /* position: fixed; */
-  /* width: 100%;
-  bottom: 0px; */
   box-shadow: 0px 5px 10px 7px rgb(0, 0, 0);
   }
 
@@ -76,6 +70,11 @@ li a:hover{
 
 .igIcon{
   fill: rgb(153, 22, 64);
+}
+
+.logo{
+  text-decoration: none;
+  color: inherit;
 }
 
 .logo:hover{

@@ -58,6 +58,8 @@ function Home({listaDeFavs}) {
         GetListaDeJuegosAPI();
     }, []);
 
+
+
     const handleFavList = (event) => {
         if(event.target.checked){
             let result = juegosCargados.filter(juego => listaDeFavs.includes(juego.id))
@@ -66,7 +68,6 @@ function Home({listaDeFavs}) {
         }else{
             console.log("unchecked")
             obtenerListaDeJuegos(juegosCargados)
-
         }
     }
 

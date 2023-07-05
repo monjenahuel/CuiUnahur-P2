@@ -34,6 +34,10 @@ const GameDetails = ({ game, listaFavs, addToFav, delFromFav }) => {
         ? "Agregar a favoritos"
         : "Quitar de favoritos";
 
+    const favButtonColor = juegoEnFavsBool
+    ? "warning"
+    : "danger";
+
     // return (
     //     <div className="container gameDetails">
     //         <img src={thumbnail} alt="" width={600}/>
@@ -59,7 +63,7 @@ const GameDetails = ({ game, listaFavs, addToFav, delFromFav }) => {
                         </Col>
                         <Col xs={12} className="mb-4">
                             <Button
-                                variant="warning"
+                                variant={favButtonColor}
                                 onClick={agregarJuegoActualAFavs}
                             >
                                 {favButtonText}
