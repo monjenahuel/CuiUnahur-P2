@@ -1,0 +1,44 @@
+.gameDetails {
+    background-color: #212d2d;
+    color: rgb(214, 209, 199);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gameDetails img {
+    margin-bottom: 20px;
+}
+
+.gameDetails h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.gameDetails p {
+    margin-bottom: 20px;
+}
+
+.gameDetails h6 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.gameDetails a {
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.gameDetails a:hover {
+    text-decoration: underline;
+}
+
+.gameDetails button {
+    margin-top: 20px;
+}

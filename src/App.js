@@ -1,6 +1,6 @@
 import './App.css';
-import Home from './pages/Home'
-import Game from './pages/Game'
+import Home from './pages/Home/Home'
+import Game from './pages/Game/Game'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Swal from 'sweetalert2'
