@@ -96,18 +96,6 @@ function Home({ listaDeFavs }) {
                         value={busqueda}
                         onChange={handleBusqueda}
                     />
-                    {/* <Form.Switch
-                        id="favSwitch"
-                        label="Favoritos"
-                        style={{
-                            color: "white",
-                            marginLeft: "10px",
-                            marginTop: "6px",
-                            fontSize: "large",
-                        }}
-                        onChange={handleFavList}
-                    /> */}
-
                     <ToggleButton
                         className="favButton"
                         id="toggle-check"
